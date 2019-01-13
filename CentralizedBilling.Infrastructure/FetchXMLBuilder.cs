@@ -9,8 +9,7 @@ namespace CentralizedBilling.Infrastructure
             return  $@"<fetch version='1.0' output-format='xml-platform' mapping='logical' distinct='false'>
                                   <entity name='account'>
                                     <attribute name='name' />
-                                    <attribute name='primarycontactid' />
-                                    <attribute name='telephone1' />
+                                    <attribute name='hisc_BillingEmail' />
                                     <attribute name='accountid' />
                                     <attribute name='address1_line1' />
                                     <attribute name='address1_line3' />
@@ -23,3 +22,4 @@ namespace CentralizedBilling.Infrastructure
         }
     }
 }
+
