@@ -9,7 +9,7 @@ namespace CentralizedBilling.Infrastructure
             return  $@"<fetch version='1.0' output-format='xml-platform' mapping='logical' distinct='false'>
                                   <entity name='account'>
                                     <attribute name='name' />
-                                  
+                                    <attribute name='hisc_billingemail' />
                                     <attribute name='accountid' />
                                     <attribute name='address1_line1' />
                                     <attribute name='address1_line3' />
