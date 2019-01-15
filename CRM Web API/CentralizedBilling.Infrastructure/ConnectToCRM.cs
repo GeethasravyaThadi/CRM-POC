@@ -38,7 +38,7 @@ namespace CentralizedBilling.Infrastructure
                 credentials.UserName.UserName = UserName;
                 credentials.UserName.Password = Password;
                 Uri serviceUri = new Uri(SoapOrgServiceUri);
-                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+               // ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 
                 OrganizationServiceProxy proxy = new OrganizationServiceProxy(serviceUri, null, credentials, null);
                 proxy.EnableProxyTypes();
@@ -52,6 +52,7 @@ namespace CentralizedBilling.Infrastructure
 
 
         // Get's the authorization header from ADFS.
+        //Please Ignore this code right now. we used this code for ADFS OAuth2 . Right now we are performing Authorization based on Azure Key Vault
         public static string GetAuthorizationHeader()
         {
 
@@ -84,6 +85,7 @@ namespace CentralizedBilling.Infrastructure
         }
 
         // Gets the Account Information from CRM Dev using OAuth2.
+        //Please Ignore this code right now. we used this code for ADFS OAuth2 . Right now we are performing Authorization based on Azure Key Vault
         public static JObject GetAccountsInfomationFromCRM(string authorizationCode)
         {
             JObject accountJson = null;

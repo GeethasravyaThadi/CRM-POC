@@ -22,6 +22,8 @@ namespace CentralizedBilling.Infrastructure.Helpers
         /// </summary>
         /// <param name="secretToGet">Name of the secret</param>
         /// <returns>String for the resource</returns>
+        /// AuthenticationCallback is Delegate async method
+        
         public async Task<string> GetStorageKey(string secretToGetKey)
         {
             var client = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(GetAccessTokenAsync), new HttpClient());
@@ -29,6 +31,9 @@ namespace CentralizedBilling.Infrastructure.Helpers
 
             return secret.Value;
         }
+
+        /* AuthenticationCallback is a delegate function and the value of authority/resource/scope is provide by SDK, 
+        we need to provide the delegate function to use these values to get the access token.*/
 
         private async Task<string> GetAccessTokenAsync(string authority, string resource, string scope)
         {
