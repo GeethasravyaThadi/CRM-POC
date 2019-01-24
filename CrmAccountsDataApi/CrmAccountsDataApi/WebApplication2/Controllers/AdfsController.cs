@@ -33,7 +33,7 @@ namespace CrmAccountsDataApi.Controllers
             {
                 var postParams = new Dictionary<string, string> {
                      { "username", @"hisc\_oauth2 _dvcrm16" },
-                     { "password", "Qi2b2S6qxK9m" },
+                     { "password", "Use service account Password here" },
                 };
                 // make a POST request to the "cards" endpoint and pass in the parameters
                 CookieCollection cc= MakeRequestCookie<dynamic>("POST", postParams);
