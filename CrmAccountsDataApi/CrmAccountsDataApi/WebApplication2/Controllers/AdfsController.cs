@@ -223,7 +223,7 @@ namespace CrmAccountsDataApi.Controllers
                 {
                     name = obj[i]["name"],
                     hisc_billingemail = obj[i]["hisc_billingemail"],
-                    accountid = obj[i]["hisc_billingemail"],
+                    accountid = obj[i]["accountid"],
                     address1_line1 = obj[i]["address1_line1"],
                     address1_line3 = obj[i]["address1_line3"],
                     address1_city = obj[i]["address1_city"],
